@@ -1,0 +1,16 @@
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\bin\Debug\ToDoList.exe.config
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\bin\Debug\ToDoList.exe
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\bin\Debug\ToDoList.pdb
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\ToDoList.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\MainWindow.g.cs
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\App.g.cs
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\ToDoList_MarkupCompile.cache
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\ToDoList_MarkupCompile.lref
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\MainWindow.baml
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\ToDoList.g.resources
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\ToDoList.Properties.Resources.resources
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\ToDoList.csproj.GenerateResource.cache
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\ToDoList.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\ToDoList.exe
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\ToDoList.pdb
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\ToDoList.exe.config
