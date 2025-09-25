@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,22 +19,13 @@ namespace ToDoList
 
     public partial class MainWindow : Window
     {
+        public ObservableCollection<TaskItem> Tasks { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
-
-            foreach(UIElement el in MainGrid.Children)
-            {
-                if(el is Button)
-                {
-                    ((Button) el).Click += ButtonClick;
-                }
-            }
-        }
-
-        private void ButtonClick(object sender, RoutedEventArgs e)
-        {
-            string str =(string) ((Button) e.OriginalSource).Content;
+            Tasks = new ObservableCollection<TaskItem>();
+            DataContext = this; // Устанавливаем контекст данных
         }
     }
 }

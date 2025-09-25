@@ -14,3 +14,5 @@ C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\ToDoList.csproj.CoreCo
 C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\ToDoList.exe
 C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\ToDoList.pdb
 C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\ToDoList.exe.config
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\Window1.g.cs
+C:\Users\User\Desktop\std\3semestr\OOP\ToDoList\obj\Debug\Window1.baml
