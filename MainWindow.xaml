@@ -13,18 +13,16 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
+            <ColumnDefinition Width="537*" />
+            <ColumnDefinition Width="263*" />
+
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Column="0" Grid.Row="0" FontSize="30" FontFamily="Britannic Bold" Foreground="#102a6b" Background="#fcedd3" >Active tasks</Button>
-        <Button Grid.Column="1" Grid.Row="0" FontSize="30" FontFamily="Britannic Bold" Foreground="#102a6b" Background="#fcedd3">Trash</Button>
-        <Frame Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Background="#015185"></Frame>
-        <TextBlock Grid.Column="2" Grid.Row="0" FontSize="30" FontFamily="Britannic Bold" VerticalAlignment="Center" TextAlignment="Center" Foreground="#cea273">Categories</TextBlock>
+        <Frame Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Background="#015185"></Frame>
+        <TextBlock Grid.Column="1" FontSize="30" FontFamily="Britannic Bold" VerticalAlignment="Center" TextAlignment="Center" Foreground="#cea273" Height="33">Categories</TextBlock>
 
-        <DataGrid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="#fcedd3" Margin="10">
-            
+        <DataGrid Grid.Column="0" Grid.Row="0"  Grid.RowSpan="2" Background="#fcedd3" Margin="10,10,10,10">
+
         </DataGrid>
 
     </Grid>
