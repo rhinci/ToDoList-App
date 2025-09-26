@@ -14,15 +14,15 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="537*" />
-            <ColumnDefinition Width="263*" />
-
+            <ColumnDefinition Width="285*" />
+            <ColumnDefinition Width="285*" />
+            <ColumnDefinition Width="230*" />
         </Grid.ColumnDefinitions>
 
-        <Frame Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Background="#015185"></Frame>
-        <TextBlock Grid.Column="1" FontSize="30" FontFamily="Britannic Bold" VerticalAlignment="Center" TextAlignment="Center" Foreground="#cea273" Height="33">Categories</TextBlock>
+        <Frame Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" Background="#015185"></Frame>
+        <TextBlock Grid.Column="2" FontSize="30" FontFamily="Britannic Bold" VerticalAlignment="Center" TextAlignment="Center" Foreground="#cea273" Height="33">Categories</TextBlock>
 
-        <DataGrid Grid.Column="0" Grid.Row="0"  Grid.RowSpan="2" Background="#fcedd3" Margin="10,10,10,10" ItemsSource="{Binding Tasks}" 
+        <DataGrid x:Name="TasksDataGrid" Grid.Column="0" Grid.Row="0"  Grid.ColumnSpan="2" Grid.RowSpan="2" Background="#fcedd3" Margin="10,10,10,10" ItemsSource="{Binding Tasks}" 
                   AutoGenerateColumns="False"
                   PreviewKeyDown="DataGrid_PreviewKeyDown">
             <DataGrid.Columns>
@@ -35,7 +35,6 @@
                 </DataGridTemplateColumn>
                 <DataGridTextColumn Header="Title" Binding="{Binding Title}" />
                 <DataGridTextColumn Header="Category" Binding="{Binding Category}" />
-                <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
                 <DataGridTemplateColumn Header="Date">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -44,10 +43,12 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTextColumn Header="Priority" Binding="{Binding Priority}" />
+                <DataGridTextColumn Header="Description (optional)" Binding="{Binding Description}" Width="*"/>
             </DataGrid.Columns>
 
         </DataGrid>
-        <Button Grid.Column="0" Grid.Row="2" Content="Add Task" Click="AddTaskButton_Click" Margin="5,5,5,5" />
+        <Button Grid.Column="0" Grid.Row="2" Content="Add Task" Click="AddTaskButton_Click" Margin="5" />
+        <Button Grid.Column="1" Grid.Row="2" Content="Delete Task" Click="DeleteTaskButton_Click" Margin="5"></Button>
 
     </Grid>
 

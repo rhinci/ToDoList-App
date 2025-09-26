@@ -42,6 +42,21 @@ namespace ToDoList
             }
         }
 
+        private void DeleteTaskButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            var selectedTask = TasksDataGrid.SelectedItem as TaskItem;
+
+            if (selectedTask != null && Tasks.Count>1)
+            {
+                Tasks.Remove(selectedTask);
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, выберите задачу для удаления.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
         private void DataGrid_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
