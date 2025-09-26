@@ -8,8 +8,9 @@
         Title="ToDoList" Height="450" Width="800">
     <Grid x:Name="MainGrid" Background="#fcedd3" >
         <Grid.RowDefinitions>
-            <RowDefinition Height="35*" />
-            <RowDefinition Height="383*" />
+            <RowDefinition Height="17*" />
+            <RowDefinition Height="183*" />
+            <RowDefinition Height="17*" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -18,10 +19,12 @@
 
         </Grid.ColumnDefinitions>
 
-        <Frame Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Background="#015185"></Frame>
+        <Frame Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Background="#015185"></Frame>
         <TextBlock Grid.Column="1" FontSize="30" FontFamily="Britannic Bold" VerticalAlignment="Center" TextAlignment="Center" Foreground="#cea273" Height="33">Categories</TextBlock>
 
-        <DataGrid Grid.Column="0" Grid.Row="0"  Grid.RowSpan="2" Background="#fcedd3" Margin="10,10,10,10" ItemsSource="{Binding Tasks}">
+        <DataGrid Grid.Column="0" Grid.Row="0"  Grid.RowSpan="2" Background="#fcedd3" Margin="10,10,10,10" ItemsSource="{Binding Tasks}" 
+                  AutoGenerateColumns="False"
+                  PreviewKeyDown="DataGrid_PreviewKeyDown">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Is Done">
                     <DataGridTemplateColumn.CellTemplate>
@@ -36,7 +39,9 @@
                 <DataGridTextColumn Header="Date" Binding="{Binding DueDate}" />
                 <DataGridTextColumn Header="Priority" Binding="{Binding Priority}" />
             </DataGrid.Columns>
+
         </DataGrid>
+        <Button Grid.Column="0" Grid.Row="2" Content="Add Task" Click="AddTaskButton_Click" Margin="5,5,5,5" />
 
     </Grid>
 

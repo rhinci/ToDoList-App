@@ -25,7 +25,31 @@ namespace ToDoList
         {
             InitializeComponent();
             Tasks = new ObservableCollection<TaskItem>();
-            DataContext = this; // Устанавливаем контекст данных
+            DataContext = this;
         }
+        private void AddTaskButton_Click(object sender, RoutedEventArgs e)
+        {
+            var currentTask = Tasks.LastOrDefault();
+
+            if (currentTask != null && !string.IsNullOrWhiteSpace(currentTask.Title) &&
+                !string.IsNullOrWhiteSpace(currentTask.Category) && currentTask.Priority > 0)
+            {
+                //Tasks.Add(new TaskItem());
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, заполните обязательные поля: Название, Категория и Приоритет.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private void DataGrid_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                e.Handled = true;
+            }
+        }
+
+
     }
 }
