@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,12 +21,22 @@ namespace ToDoList
     public partial class MainWindow : Window
     {
         public ObservableCollection<TaskItem> Tasks { get; set; }
+        public ObservableCollection<CategoryItem> Categories { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
             Tasks = new ObservableCollection<TaskItem>();
+            Categories = new ObservableCollection<CategoryItem>
+            {
+                new CategoryItem { Name = "All", IsSelected = true }
+            };
             DataContext = this;
+
+            foreach (var category in Categories)
+            {
+                category.PropertyChanged += Category_PropertyChanged;
+            }
         }
         private void AddTaskButton_Click(object sender, RoutedEventArgs e)
         {
@@ -33,8 +44,13 @@ namespace ToDoList
 
             if (currentTask != null && !string.IsNullOrWhiteSpace(currentTask.Title) &&
                 !string.IsNullOrWhiteSpace(currentTask.Category) && currentTask.Priority > 0)
-            {
-                //Tasks.Add(new TaskItem());
+            {    
+                if (!Categories.Any(c => c.Name.Equals(currentTask.Category, StringComparison.OrdinalIgnoreCase)))
+                {
+
+                    Categories.Add(new CategoryItem { Name = currentTask.Category, IsSelected = true });
+                    //SortTasks();
+                }
             }
             else
             {
@@ -50,6 +66,7 @@ namespace ToDoList
             if (selectedTask != null && Tasks.Count>1)
             {
                 Tasks.Remove(selectedTask);
+                //SortTasks();
             }
             else
             {
@@ -65,6 +82,38 @@ namespace ToDoList
             }
         }
 
+        private void FilterTasks()
+        {
+            var selectedCategories = Categories.Where(c => c.IsSelected).Select(c => c.Name).ToList();
 
+            if (selectedCategories.Contains("All"))
+            {
+                TasksDataGrid.ItemsSource = Tasks;
+            }
+            else
+            {
+                var filteredTasks = Tasks.Where(t => selectedCategories.Contains(t.Category)).ToList();
+                TasksDataGrid.ItemsSource = filteredTasks;
+            }
+        }
+
+        private void Category_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(CategoryItem.IsSelected))
+            {
+                FilterTasks();
+            }
+        }
+
+        /*private void SortTasks()
+        {
+            var sortedTasks = Tasks
+                .OrderBy(t => t.Priority)
+                .ThenBy(t => t.DueDate)   
+                .ThenBy(t => t.Title)      
+                .ToList();
+
+            TasksDataGrid.ItemsSource = sortedTasks;
+        }*/
     }
 }

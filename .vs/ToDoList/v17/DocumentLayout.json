@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\std\\3semestr\\OOP\\ToDoList\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{067C3E13-343C-4A4F-8DFC-4DF2B20BA1EC}|ToDoList.csproj|C:\\Users\\User\\Desktop\\std\\3semestr\\OOP\\ToDoList\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{067C3E13-343C-4A4F-8DFC-4DF2B20BA1EC}|ToDoList.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{067C3E13-343C-4A4F-8DFC-4DF2B20BA1EC}|ToDoList.csproj|c:\\users\\user\\desktop\\std\\3semestr\\oop\\todolist\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{067C3E13-343C-4A4F-8DFC-4DF2B20BA1EC}|ToDoList.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{067C3E13-343C-4A4F-8DFC-4DF2B20BA1EC}|ToDoList.csproj|C:\\Users\\User\\Desktop\\std\\3semestr\\OOP\\ToDoList\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{067C3E13-343C-4A4F-8DFC-4DF2B20BA1EC}|ToDoList.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{067C3E13-343C-4A4F-8DFC-4DF2B20BA1EC}|ToDoList.csproj|c:\\users\\user\\desktop\\std\\3semestr\\oop\\todolist\\categoryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{067C3E13-343C-4A4F-8DFC-4DF2B20BA1EC}|ToDoList.csproj|solutionrelative:categoryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{067C3E13-343C-4A4F-8DFC-4DF2B20BA1EC}|ToDoList.csproj|C:\\Users\\User\\Desktop\\std\\3semestr\\OOP\\ToDoList\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,7 +37,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "CategoryItem.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\std\\3semestr\\OOP\\ToDoList\\CategoryItem.cs",
+              "RelativeDocumentMoniker": "CategoryItem.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\std\\3semestr\\OOP\\ToDoList\\CategoryItem.cs",
+              "RelativeToolTip": "CategoryItem.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T14:50:30.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "WpfXamlLoader.cs",
               "DocumentMoniker": "C:\\Users\\User\\AppData\\Local\\Temp\\.vsdbgsrc\\cc40e6c9113e8e409e66507b58c06c87fa4d9cf9f4e297b5ae16de018dfbe2c9\\WpfXamlLoader.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\cc40e6c9113e8e409e66507b58c06c87fa4d9cf9f4e297b5ae16de018dfbe2c9\\WpfXamlLoader.cs",
@@ -45,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\std\\3semestr\\OOP\\ToDoList\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -57,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\std\\3semestr\\OOP\\ToDoList\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -69,26 +86,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\std\\3semestr\\OOP\\ToDoList\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\std\\3semestr\\OOP\\ToDoList\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAADEAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAGEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-20T00:12:49.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TaskItem.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\std\\3semestr\\OOP\\ToDoList\\TaskItem.cs",
               "RelativeDocumentMoniker": "TaskItem.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\std\\3semestr\\OOP\\ToDoList\\TaskItem.cs",
               "RelativeToolTip": "TaskItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-25T23:22:45.66Z",
               "EditorCaption": ""

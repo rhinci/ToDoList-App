@@ -50,6 +50,14 @@
         <Button Grid.Column="0" Grid.Row="2" Content="Add Task" Click="AddTaskButton_Click" Margin="5" />
         <Button Grid.Column="1" Grid.Row="2" Content="Delete Task" Click="DeleteTaskButton_Click" Margin="5"></Button>
 
+        <ItemsControl Grid.Column="2" Grid.Row="1" ItemsSource="{Binding Categories}" Margin="10">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox Content="{Binding Name}" IsChecked="{Binding IsSelected, Mode=TwoWay}" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
     </Grid>
 
 
