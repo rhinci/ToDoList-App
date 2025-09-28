@@ -49,7 +49,7 @@ namespace ToDoList
                 {
 
                     Categories.Add(new CategoryItem { Name = currentTask.Category, IsSelected = true });
-                    //SortTasks();
+                    SortTasks();
                 }
             }
             else
@@ -66,7 +66,7 @@ namespace ToDoList
             if (selectedTask != null && Tasks.Count>1)
             {
                 Tasks.Remove(selectedTask);
-                //SortTasks();
+                SortTasks();
             }
             else
             {
@@ -105,15 +105,18 @@ namespace ToDoList
             }
         }
 
-        /*private void SortTasks()
+        private void SortTasks()
         {
             var sortedTasks = Tasks
                 .OrderBy(t => t.Priority)
-                .ThenBy(t => t.DueDate)   
-                .ThenBy(t => t.Title)      
+                .ThenBy(t => t.DueDate)
+                .ThenBy(t => t.Title)
                 .ToList();
-
-            TasksDataGrid.ItemsSource = sortedTasks;
-        }*/
+            Tasks.Clear();
+            foreach (var task in sortedTasks)
+            {
+                Tasks.Add(task);
+            }
+        }
     }
 }
