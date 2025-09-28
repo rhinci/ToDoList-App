@@ -22,9 +22,9 @@
         <Frame Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" Background="#015185"></Frame>
         <TextBlock Grid.Column="2" FontSize="30" FontFamily="Britannic Bold" VerticalAlignment="Center" TextAlignment="Center" Foreground="#cea273" Height="33">Categories</TextBlock>
 
-        <DataGrid x:Name="TasksDataGrid" Grid.Column="0" Grid.Row="0"  Grid.ColumnSpan="2" Grid.RowSpan="2" Background="#fcedd3" Margin="10,10,10,10" ItemsSource="{Binding Tasks}" 
+        <DataGrid x:Name="TasksDataGrid" Grid.Column="0" Grid.Row="0"  Grid.ColumnSpan="2" Grid.RowSpan="2" Background="#fcedd3" Foreground="#015185" Margin="10,10,10,10" ItemsSource="{Binding Tasks}" 
                   AutoGenerateColumns="False"
-                  PreviewKeyDown="DataGrid_PreviewKeyDown">
+                  PreviewKeyDown="DataGrid_PreviewKeyDown" FontSize="16" FontFamily="Britannic Bold">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Is Done">
                     <DataGridTemplateColumn.CellTemplate>
@@ -47,10 +47,10 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <Button Grid.Column="0" Grid.Row="2" Content="Add Task" Click="AddTaskButton_Click" Margin="5" />
-        <Button Grid.Column="1" Grid.Row="2" Content="Delete Task" Click="DeleteTaskButton_Click" Margin="5"></Button>
+        <Button Grid.Column="0" Background="#cea273" Foreground="#015185" Grid.Row="2" Content="Add Task" Click="AddTaskButton_Click" Margin="5" FontSize="16" FontFamily="Britannic Bold" />
+        <Button Grid.Column="1" Background="#cea273" Foreground="#015185" Grid.Row="2" Content="Delete Task" Click="DeleteTaskButton_Click" Margin="5" FontSize="16" FontFamily="Britannic Bold"></Button>
 
-        <ItemsControl Grid.Column="2" Grid.Row="1" ItemsSource="{Binding Categories}" Margin="10">
+        <ItemsControl Grid.Column="2" Grid.Row="1" ItemsSource="{Binding Categories}" Margin="30" FontSize="25" FontFamily="Britannic Bold" Foreground="#cea273">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <CheckBox Content="{Binding Name}" IsChecked="{Binding IsSelected, Mode=TwoWay}" />
