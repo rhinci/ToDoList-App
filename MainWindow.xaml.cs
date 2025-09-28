@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,6 +15,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+
 
 namespace ToDoList
 {
@@ -32,10 +35,38 @@ namespace ToDoList
                 new CategoryItem { Name = "All", IsSelected = true }
             };
             DataContext = this;
+            LoadTasksFromFile("tasks.json");
 
             foreach (var category in Categories)
             {
                 category.PropertyChanged += Category_PropertyChanged;
+            }
+            this.Closing += MainWindow_Closing;
+        }
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            SaveTasksToFile("tasks.json");
+        }
+        private void SaveTasksToFile(string filePath)
+        {
+            var json = JsonSerializer.Serialize(Tasks);
+            File.WriteAllText(filePath, json);
+        }
+
+        private void LoadTasksFromFile(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                var json = File.ReadAllText(filePath);
+                var tasks = JsonSerializer.Deserialize<ObservableCollection<TaskItem>>(json);
+                if (tasks != null)
+                {
+                    Tasks.Clear();
+                    foreach (var task in tasks)
+                    {
+                        Tasks.Add(task);
+                    }
+                }
             }
         }
         private void AddTaskButton_Click(object sender, RoutedEventArgs e)
@@ -49,7 +80,6 @@ namespace ToDoList
                 {
 
                     Categories.Add(new CategoryItem { Name = currentTask.Category, IsSelected = true });
-                    SortTasks();
                 }
             }
             else
@@ -66,7 +96,6 @@ namespace ToDoList
             if (selectedTask != null && Tasks.Count>1)
             {
                 Tasks.Remove(selectedTask);
-                SortTasks();
             }
             else
             {
@@ -102,20 +131,6 @@ namespace ToDoList
             if (e.PropertyName == nameof(CategoryItem.IsSelected))
             {
                 FilterTasks();
-            }
-        }
-
-        private void SortTasks()
-        {
-            var sortedTasks = Tasks
-                .OrderBy(t => t.Priority)
-                .ThenBy(t => t.DueDate)
-                .ThenBy(t => t.Title)
-                .ToList();
-            Tasks.Clear();
-            foreach (var task in sortedTasks)
-            {
-                Tasks.Add(task);
             }
         }
     }
