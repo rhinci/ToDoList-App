@@ -88,6 +88,7 @@
     </ApplicationDefinition>
     <Compile Include="CategoryItem.cs" />
     <Compile Include="TaskItem.cs" />
+    <Compile Include="ToDoManager.cs" />
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>

@@ -10,8 +10,7 @@ namespace ToDoList
     public class CategoryItem : INotifyPropertyChanged
     {
         private bool _isSelected;
-
-        public string Name { get; set; }
+        public string Name {get; set;}
 
         public bool IsSelected
         {
